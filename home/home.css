@@ -226,6 +226,8 @@ a {
     color: var(--branco);
 }
 
+/* Livros */
+
 .livros-recomendados {
     display: flex;
     flex-direction: row;
@@ -238,6 +240,16 @@ a {
     gap: 80px;
 
 }
+
+
+.livro img {
+    height: 300px;
+}
+
+.livro-2 img {
+    margin-bottom: 40px;
+}
+
 
 
 .titulo-secao {
@@ -254,3 +266,110 @@ a {
 .autor {
     font-weight: normal;
 }
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #26333D;
+    padding: 150px;
+}
+
+.texto-redes-sociais {
+    color: #2AB2AB;
+    font-weight: bolder;
+}
+
+.ultima-linha {
+    color: white;
+
+}
+
+
+.textos-azul-cima {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-end;
+    align-items: center;
+    gap: 280px;
+    margin: 38px;
+    
+}
+
+.textos-azul-cima .biblioteca p{
+    color: #2AB2AB;
+    font-weight: bold;
+}
+
+
+
+.textos-azul-cima .biblioteca span {
+    color: white;
+}
+
+.texto-azul-logos-baixo {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-end;
+    margin: 50px;
+
+    gap: 250px;
+
+}
+
+
+
+.quem-somos p {
+    font-weight: bold;
+    color: #2AB2AB;
+}
+
+.quem-somos span {
+    color: white;
+   
+}
+
+
+
+.ultima-linha {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 50px;
+    
+    
+}
+
+.links-legais {
+    display: flex;
+    flex-direction: row;
+
+    gap: 50px;
+    
+    
+    
+    
+}
+
+.logo-bibliotec-e-senai {
+    display: flex;;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start ;
+
+    gap: 100px;
+    
+    
+    
+
+}
+
+
+
+
+
