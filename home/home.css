@@ -231,6 +231,15 @@
 .rodape {
     background-color: #26333D;
     padding: 150px;
+
+     display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "logo topo"
+        "logo baixo"
+        "linha linha"
+        "ultima ultima";
+    row-gap: 40px;
 }
 
 .texto-redes-sociais {
@@ -243,6 +252,11 @@
 
 }
 
+.linha {
+    grid-area: linha;
+}
+
+
 
 .textos-azul-cima {
     display: flex;
@@ -252,6 +266,9 @@
     align-items: center;
     gap: 280px;
     margin: 38px;
+
+    grid-area: topo;
+    
     
 }
 
@@ -273,6 +290,8 @@
     align-items: center;
     justify-content: flex-end;
     margin: 50px;
+
+    grid-area: baixo;
 
     gap: 250px;
 
@@ -300,6 +319,9 @@
     justify-content: space-between;
 
     margin-top: 50px;
+
+     grid-area: ultima;
+    
     
     
 }
@@ -322,9 +344,10 @@
     align-items: flex-start ;
 
     gap: 100px;
+
+    grid-area: logo; 
     
-    
-    
+   
 
 }
 
