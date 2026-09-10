@@ -35,7 +35,7 @@
 .texto-banner p {
     font-size: 1.5em;
     width: 60%;
-    
+
 }
 
 .botao {
@@ -114,11 +114,13 @@
     align-items: center;
     justify-content: center;
 
-    padding: 80px 20px 50px; /* em cima -> direita e esquerda -> embaixo */
+    padding: 80px 20px 50px;
+    /* em cima -> direita e esquerda -> embaixo */
 
     border: 1px solid var(--azul-escuro);
     border-radius: 30px;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25); /* x -> y -> blur(desfoque) -> cor com transparência */
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+    /* x -> y -> blur(desfoque) -> cor com transparência */
 
     text-align: center;
 
@@ -232,7 +234,7 @@
     background-color: #26333D;
     padding: 150px;
 
-     display: grid;
+    display: grid;
     grid-template-columns: auto 1fr;
     grid-template-areas:
         "logo topo"
@@ -268,11 +270,11 @@
     margin: 38px;
 
     grid-area: topo;
-    
-    
+
+
 }
 
-.textos-azul-cima .biblioteca p{
+.textos-azul-cima .biblioteca p {
     color: #2AB2AB;
     font-weight: bold;
 }
@@ -294,7 +296,6 @@
     grid-area: baixo;
 
     gap: 250px;
-
 }
 
 
@@ -306,7 +307,6 @@
 
 .quem-somos span {
     color: white;
-   
 }
 
 
@@ -320,10 +320,7 @@
 
     margin-top: 50px;
 
-     grid-area: ultima;
-    
-    
-    
+    grid-area: ultima;
 }
 
 .links-legais {
@@ -331,27 +328,256 @@
     flex-direction: row;
 
     gap: 50px;
-    
-    
-    
-    
 }
 
 .logo-bibliotec-e-senai {
-    display: flex;;
+    display: flex;
+    ;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start ;
+    align-items: flex-start;
 
     gap: 100px;
 
-    grid-area: logo; 
-    
-   
+    grid-area: logo;
+}
+
+/* RESPONSIVIDADE */
+.botao-menu {
+    display: none;
+    /* Esconde o elemento */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-menu i {
+    font-size: 2em;
+
+    color: var(--branco);
+    border-radius: 10px;
+}
+
+/* RESPONSIVIDADE COM TAMANHOS -> MEDIA QUERY */
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 12px
+    }
+
+    .cabecalho img {
+        width: 60%;
+    }
+
+    .texto-banner h1 {
+        text-align: center;
+    }
+
+    /* BENEFÍCIOS */
+
+    .beneficios {
+        gap: 50px;
+
+        padding: 30px 0;
+
+        overflow: hidden;
+    }
+
+    .beneficios-lista {
+        grid-template-columns: repeat(3, 30%);
+
+        overflow-x: scroll;
+        /* Permite que esse objeto rode */
+
+        padding: 50px 20px;
+
+        justify-content: flex-start;
+    }
+
+    .beneficios-lista::-webkit-scrollbar {
+        display: none;
+    }
+
+    .beneficio {
+        padding: 80px 10px 50px;
+    }
+
+    .beneficio h3 {
+        margin-bottom: 25px;
+        width: 60%;
+    }
+
+    .beneficio p {
+        width: 60%;
+    }
+
+    /* BANNER MEIO */
+
+    .banner-meio {
+        background-position: center;
+        padding: 0 30px;
+    }
+
+    .banner-meio .texto-banner {
+        align-items: flex-end;
+    }
+
+    .banner-meio .texto-banner p {
+        text-align: right;
+    }
+
+    /* LIVROS */
+
+    .livros-recomendados {
+        flex-wrap: wrap;
+    }
+
+    .livro img {
+        max-width: 100%;
+    }
+
+
+
+    .livro h3 {
+        font-size: 1.2em;
+    }
+
+    .livro {
+        font-size: 1em;
+    }
+
 
 }
 
+@media (max-width: 768px) {
 
+    .cabecalho {
+        padding: 0 40px;
 
+        position: relative;
+    }
 
+    .botao-menu {
+        /* Faz o menu hamburguer aparecer novamente */
+        display: flex;
+    }
 
+    .navegacao {
+
+        background-color: var(--azul-escuro);
+
+        position: absolute;
+        /* Distância de 10vh do topo */
+        top: 10vh;
+
+        /* Encosta na esquerda */
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 40px;
+
+        border-radius: 0 0 0 30px;
+
+        flex-direction: column;
+        align-items: flex-end;
+
+        gap: 20px;
+
+        /* Só funciona com position, quanto maior o z-index, mais para cima o elemento fica */
+        z-index: 100;
+
+        display: none;
+    }
+
+    .navegacao.ativo {
+        display: flex;
+    }
+
+    /* BANNER PRINCIPAL */
+
+    .banner-principal {
+        height: 50vh;
+
+        padding: 30px 0 10px 0;
+
+        position: relative;
+    }
+
+    .banner-principal .texto-banner {
+        width: 100%;
+        height: 100%;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .banner-principal .texto-banner h1 {
+        font-size: 2em;
+    }
+
+    .banner-principal .texto-banner p {
+        display: none;
+    }
+
+    .banner-principal img {
+        width: 35%;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 1;
+    }
+
+    .banner-principal .botao {
+        padding: 20px 40px;
+
+        font-size: 1.2em;
+
+        z-index: 2;
+    }
+
+    /* BENEFÍCIOS */
+    .beneficios-lista {
+        grid-template-columns: repeat(3, 45%);
+    }
+
+    .beneficio-icone img {
+        width: 40%;
+    }
+
+    /* BANNER DO MEIO */
+
+    .banner-meio .texto-banner {
+        display: none;
+    }
+
+    /* FOOTER */
+
+    .rodape {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+        "logo logo"
+        "topo topo"
+        "baixo baixo"
+        "linha linha"
+        "ultima ultima";
+    }
+
+    .logo-bibliotec-e-senai {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .textos-azul-cima .texto-azul-logos-baixo {
+
+    }
+}
