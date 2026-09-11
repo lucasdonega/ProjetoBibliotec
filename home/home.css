@@ -560,14 +560,18 @@
     .rodape {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 160px 125px 125px 10px);
         grid-template-areas:
         "logo logo"
         "topo topo"
         "baixo baixo"
         "linha linha"
         "ultima ultima";
+
+        height: 750px;
+        padding: 50px;
     }
+
 
     .logo-bibliotec-e-senai {
         display: flex;
@@ -577,7 +581,63 @@
         justify-content: space-between;
     }
 
-    .textos-azul-cima .texto-azul-logos-baixo {
-
+    .biblioteca {
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.5em;
+        line-height: 1.7;
+        margin-right: 80px;
+        white-space: nowrap;
     }
+
+    .quem-somos {
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 1.5em;
+        line-height: 1.7;
+        white-space: nowrap;
+        margin-right: -30px;
+    }
+
+    .textos-azul-cima {
+        height: 50px;
+    }
+
+    .texto-redes-sociais {
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.5em;
+        line-height: 1.7;
+        margin-right: 60px;
+        white-space: nowrap;
+    }
+
+    .logos {
+        display: flex;
+        margin-right: -30px;
+        gap: 20px;
+    }
+
+    .texto-azul-logos-baixo {
+        height: 10px;
+    }
+
+    .linha {
+        height: 20px;
+    }
+
+    .ultima-linha {
+        font-size: 1.2em;
+        height: 0px;
+    }
+
+    .links-legais {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: right;
+    }
+
+
+     
 }
